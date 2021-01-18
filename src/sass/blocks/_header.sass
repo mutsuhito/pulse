@@ -1,0 +1,54 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__logo
+        width: 250px
+        img
+            width: 100%
+    &__official
+        color: #ffffff
+        font-size: 12px
+        font-weight: 500
+        text-align: center
+        span
+            display: block
+            font-size: 18px
+    &__phone
+        display: block
+        color: #ffffff
+        font-size: 18px
+        font-weight: 700
+
+        &:hover
+            text-decoration: none
+            color: $red
+            transition: 0.5s all
+    &__contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+@media ( max-width: 768px  )
+    .header
+        justify-content: space-around
+        &__phone
+            font-size: 16px
+        &__official
+            display: none
+// @media ( max-width: 568px  )
+//     .header
+//         display: flex
+//         flex-wrap: wrap
+//         justify-content: flex-start
+//         &__phone
+//             margin-top: 10px
+@media ( max-width: 450px  )
+    .header
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        &__contacts
+            margin-left: 30px
+            margin-top: 10px
+        &__official
+            display: none
