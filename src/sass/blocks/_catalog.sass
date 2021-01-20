@@ -1,0 +1,91 @@
+.catalog
+    padding-bottom: 103px
+    &__tabs
+        padding: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 55px
+        list-style-type: none
+        margin-bottom: 0
+    &__tab
+        margin: 5px
+        width: 200px
+        height: 50px
+        border: 2px solid #d0d0d0
+        color: #6b6b6b
+        font-size: 18px
+        font-weight: 500
+        line-height: 46px
+        text-align: center
+        text-transform: uppercase
+        transform: skewX(-22deg)
+        cursor: pointer
+        &:hover
+            box-shadow: 3px 3px 20px $red
+            transition: 1s all
+        span
+            display: block
+            transform: skewX(22deg)
+        &_active
+            background-color: $red
+            color: #ffffff
+            border: none
+    &__content
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        margin-top: 20px
+    &__item
+        padding: 23px 0 18px 0
+        margin-top: 25px
+        width: 300px
+        min-height: 440px
+        border: 2px solid #e8e8e8
+        text-align: center
+        letter-spacing: normal
+        line-height: normal
+    &__img
+        width: 100%
+        height: 204px
+    &__subtitle
+        margin-top: 15px
+        color: #0d0d0d
+        font-size: 16px
+        font-weight: 700
+    &__descr
+        margin-top: 12px
+        color: #0d0d0d
+        font-size: 14px
+        font-weight: 300
+    &__details
+        margin-top: 15px
+        a
+            width: 100px
+            color: $red
+            font-size: 14px
+            font-weight: 500
+            text-decoration: underline
+            cursor: pointer
+            &:hover
+                color: $red
+    hr
+        width: 260px
+        background-color: #e8e8e8
+        margin: 0 auto
+        margin-top: 17px
+    &__costs
+        display: flex
+        justify-content: center
+        margin-top: 20px
+        align-items: center
+    &__cost1
+        color: #555555
+        font-size: 14px
+        font-weight: 300
+        text-decoration: line-through
+        text-align: left
+    &__cost2
+        color: #050505
+        font-size: 20px
+        font-weight: 700
