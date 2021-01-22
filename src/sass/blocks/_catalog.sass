@@ -32,11 +32,13 @@
             color: #ffffff
             border: none
     &__content
-        display: flex
-        justify-content: space-around
+        display: none
+        justify-content: flex-start
         flex-wrap: wrap
         margin-top: 20px
-    &__item
+        &_active
+            display: flex
+    &-item
         padding: 23px 0 18px 0
         margin-top: 25px
         width: 300px
@@ -45,47 +47,113 @@
         text-align: center
         letter-spacing: normal
         line-height: normal
-    &__img
-        width: 100%
-        height: 204px
-    &__subtitle
-        margin-top: 15px
-        color: #0d0d0d
-        font-size: 16px
-        font-weight: 700
-    &__descr
-        margin-top: 12px
-        color: #0d0d0d
-        font-size: 14px
-        font-weight: 300
-    &__details
-        margin-top: 15px
-        a
-            width: 100px
-            color: $red
+        overflow: hidden
+        margin-left: 8px
+        margin-right: 8px
+        &__img
+            width: 100%
+            height: 204px
+        &__subtitle
+            margin-top: 15px
+            color: #0d0d0d
+            font-size: 16px
+            font-weight: 700
+        &__descr
+            margin-top: 12px
+            color: #0d0d0d
             font-size: 14px
-            font-weight: 500
-            text-decoration: underline
-            cursor: pointer
-            &:hover
+            font-weight: 300
+        &__details
+            margin-top: 15px
+            a
+                width: 100px
                 color: $red
-    hr
-        width: 260px
-        background-color: #e8e8e8
-        margin: 0 auto
-        margin-top: 17px
-    &__costs
-        display: flex
-        justify-content: center
-        margin-top: 20px
-        align-items: center
-    &__cost1
-        color: #555555
-        font-size: 14px
-        font-weight: 300
-        text-decoration: line-through
-        text-align: left
-    &__cost2
-        color: #050505
-        font-size: 20px
-        font-weight: 700
+                font-size: 14px
+                font-weight: 500
+                text-decoration: underline
+                cursor: pointer
+                &:hover
+                    color: $red
+        hr
+            width: 260px
+            background-color: #e8e8e8
+            margin: 0 auto
+            margin-top: 17px
+        &__costs
+            display: flex
+            justify-content: center
+            margin-top: 20px
+            align-items: center
+        &__old-cost
+            color: #555555
+            font-size: 14px
+            font-weight: 300
+            text-decoration: line-through
+            text-align: left
+        &__new-cost2
+            color: #050505
+            font-size: 20px
+            font-weight: 700
+        &__wrapper
+            display: flex
+            width: 200%
+        &__content
+            width: 50%
+            transform: translateX(-100%)
+            transition: 0.5s all
+            &_active
+                transform: translateX(0%)
+        &__list
+            width: 50%
+            list-style-type: none
+            padding-left: 20px
+            padding-right: 20px
+            text-align: left
+            color: #555555
+            font-size: 14px
+            font-weight: 300
+            transform: translateX(0%)
+            transition: 0.5s all
+            position: relative
+            &_details
+                position: absolute
+                bottom: -10px
+                left: 50%
+                transform: translateX(-50%)
+                margin-top: 15px
+                a
+                    width: 100px
+                    color: $red
+                    font-size: 14px
+                    font-weight: 500
+                    text-decoration: underline
+                    cursor: pointer
+                    &:hover
+                        color: $red
+            li
+                width: 100%
+                margin-top: 25px
+                &:first-child
+                    margin-top: 0
+                &::before
+                    content: ""
+                    transform: translateY(-50%)
+                    display: inline-block
+                    width: 5px
+                    height: 5px
+                    background-color: $red
+                    margin-right: 14px
+            &_active
+                transform: translateX(-100%)
+
+@media ( max-width: 948px )
+    .catalog
+        &__content
+            justify-content: center
+        &-item
+@media ( max-width: 652px )
+    .catalog
+        &__tabs
+            flex-direction: column
+        &__content
+            justify-content: center

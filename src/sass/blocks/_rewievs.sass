@@ -1,0 +1,56 @@
+.rewievs
+    padding-bottom: 70px
+    &__wrapper
+        margin-top: 70px
+    &__item
+        display: flex
+        justify-content: center
+        margin-top: 100px
+        &:first-child
+            margin-top: 0
+    &__text
+        margin-left: 62px
+        color: #0d0d0d
+        font-size: 16px
+        font-weight: 300
+        font-style: normal
+        letter-spacing: normal
+        line-height: normal
+    &__title
+        font-size: 18px
+        font-weight: 700
+    &__subtitle
+        color: #646464
+        font-size: 14px
+        margin-top: 10px
+        margin-bottom: 19px
+    &__img
+        display: block
+        width: 169px
+        height: 169px
+@media ( max-width: 978px  )
+    .rewievs
+        .container
+            padding-left: 14px
+            padding-right: 5px
+@media ( max-width: 535px  )
+    .rewievs
+        &__text
+            font-size: 13px
+        &__title
+            font-size: 15px
+        &__subtitle
+            font-size: 11px
+@media ( max-width: 425px  )
+    .rewievs
+        &__item
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            text-align: center
+        &__img
+            margin: 0 auto
+            margin-bottom: 10px
+        &__text
+            margin-left: 0

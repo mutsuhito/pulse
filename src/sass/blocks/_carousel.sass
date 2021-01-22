@@ -11,7 +11,8 @@
                 outline: none
     // .tns-outer
     //     position: relative
-
+    .tns-nav
+        display: none
     .prev, .next
         position: absolute
         top: 50%
@@ -31,15 +32,43 @@
         img
             display: block
             margin: 0 auto
-    .tns-nav
 
-        display: flex
-        justify-content: center
-        button
-            background-color: $red
-            border-color: $red
-            &:focus
-                outline: none
-        .tns-nav-active
-            background-color: #2c0ed8
-            border-color: #2c0ed8
+@media ( max-width: 1100px  )
+    .carousel
+        .prev, .next
+            display: none
+        .tns-nav
+            margin-top: 10px
+            display: flex
+            justify-content: center
+            button
+                background-color: $red
+                border-color: $red
+                margin-left: 10px
+                height: 15px
+                width: 15px
+                border-radius: 50%
+                &:first-child
+                    margin-left: 0
+                &:focus
+                    outline: none
+            .tns-nav-active
+                background-color: #2c0ed8
+                border-color: #2c0ed8
+@media ( max-width: 768px  )
+    .carousel
+        padding: 81px 0
+        &__inner
+            height: 400px
+            img
+                width: 400px
+                height: 330px
+
+@media ( max-width: 320px  )
+    .carousel
+        padding: 81px 0
+        &__inner
+            height: 300px
+            img
+                width: 300px
+                height: 230px
